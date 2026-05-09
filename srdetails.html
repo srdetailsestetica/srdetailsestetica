@@ -1,0 +1,265 @@
+export default function SRDetailsSite() { return ( <div className="min-h-screen bg-black text-white font-sans"> {/* HERO */} <section className="relative flex flex-col items-center justify-center text-center px-6 py-24 bg-gradient-to-b from-black via-zinc-900 to-red-950"> <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,red,transparent_60%)]" />
+
+<div className="relative z-10 max-w-4xl">
+      <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-red-600 drop-shadow-lg">
+        S&R DETAILS
+      </h1>
+
+      <p className="mt-6 text-lg md:text-2xl text-zinc-300 leading-relaxed">
+        Estética automotiva premium em Jundiaí-SP.
+        Lavagem técnica, polimento e higienização com acabamento profissional para o seu veículo.
+      </p>
+
+      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://instagram.com/sr_detailsestetica"
+          target="_blank"
+          className="bg-zinc-900 border border-red-600 hover:bg-red-600/20 transition px-8 py-4 rounded-2xl text-lg font-semibold shadow-xl"
+        >
+          Instagram Oficial
+        </a>
+        <a
+          href="https://wa.me/5511972582900"
+          className="bg-red-600 hover:bg-red-700 transition px-8 py-4 rounded-2xl text-lg font-semibold shadow-2xl"
+        >
+          Solicitar Orçamento
+        </a>
+
+        <a
+          href="#servicos"
+          className="border border-red-600 hover:bg-red-600/20 transition px-8 py-4 rounded-2xl text-lg font-semibold"
+        >
+          Ver Serviços
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* SOBRE */}
+  <section className="px-6 py-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 className="text-4xl font-bold text-red-500 mb-6">
+        Cuidado de verdade para seu carro
+      </h2>
+
+      <p className="text-zinc-300 text-lg leading-relaxed">
+        Na S&R Details trabalhamos com foco total em qualidade, acabamento e atenção aos detalhes.
+        Cada veículo recebe um tratamento exclusivo para manter brilho, proteção e aparência impecável.
+      </p>
+    </div>
+
+    <div className="bg-zinc-900 border border-red-900 rounded-3xl p-8 shadow-2xl">
+      <ul className="space-y-4 text-lg text-zinc-200">
+        <li>✔ Lavagem Convencional
+        ✔ Lavagem Técnica
+        ✔ Polimento Comercial
+        ✔ Polimento Técnico
+        ✔ Higienização Interna
+        ✔ Lavagem de Motor
+        ✔ Lavagem de Chassis</li>
+      </ul>
+    </div>
+  </section>
+
+  {/* SERVIÇOS */}
+  <section id="servicos" className="bg-zinc-950 py-20 px-6">
+    <div className="max-w-6xl mx-auto text-center">
+      <h2 className="text-4xl font-bold text-red-500 mb-4">
+        Nossos Serviços
+      </h2>
+
+      <p className="text-zinc-400 mb-12 text-lg">
+        Atendimento com qualidade premium e produtos profissionais.
+      </p>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            titulo: 'Lavagem Técnica',
+            descricao: 'Limpeza detalhada com acabamento premium e cuidado profissional em cada detalhe.',
+          },
+          {
+            titulo: 'Polimento Técnico',
+            descricao: 'Remoção de riscos leves e recuperação intensa do brilho da pintura.',
+          },
+          {
+            titulo: 'Higienização Interna',
+            descricao: 'Limpeza completa dos bancos, teto, carpetes e acabamento interno.',
+          },
+          {
+            titulo: 'Polimento Técnico',
+            descricao: 'Remoção de riscos leves e recuperação intensa do brilho da pintura.',
+          },
+          {
+            titulo: 'Higienização Interna',
+            descricao: 'Limpeza completa dos bancos, teto, carpetes e acabamento interno.',
+          },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-black border border-zinc-800 hover:border-red-600 transition rounded-3xl p-8 shadow-xl"
+          >
+            <h3 className="text-2xl font-bold text-red-500 mb-4">
+              {item.titulo}
+            </h3>
+
+            <p className="text-zinc-300 leading-relaxed">
+              {item.descricao}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* GALERIA */}
+  <section className="py-20 px-6 max-w-6xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-red-500">
+        Resultados
+      </h2>
+
+      <p className="text-zinc-400 mt-4 text-lg">
+        Qualidade visível em cada detalhe.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-6">
+      <div className="overflow-hidden rounded-3xl border border-red-900 shadow-2xl bg-zinc-900">
+        <img
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop"
+          alt="Polimento"
+          className="w-full h-72 object-cover hover:scale-105 transition duration-500"
+        />
+      </div>
+
+      <div className="overflow-hidden rounded-3xl border border-red-900 shadow-2xl bg-zinc-900">
+        <img
+          src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop"
+          alt="Lavagem"
+          className="w-full h-72 object-cover hover:scale-105 transition duration-500"
+        />
+      </div>
+
+      <div className="overflow-hidden rounded-3xl border border-red-900 shadow-2xl bg-zinc-900">
+        <img
+          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop"
+          alt="Detalhamento"
+          className="w-full h-72 object-cover hover:scale-105 transition duration-500"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section className="py-20 px-6 bg-black border-t border-zinc-900">
+    <div className="max-w-6xl mx-auto text-center">
+      <h2 className="text-4xl font-bold text-red-500 mb-6">
+        Atendimento Premium
+      </h2>
+
+      <p className="text-zinc-300 text-lg max-w-3xl mx-auto leading-relaxed">
+        Trabalhamos com produtos profissionais e atenção total aos detalhes para entregar brilho, proteção e acabamento acima da média.
+      </p>
+
+      <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+          <h3 className="text-2xl font-bold text-red-500 mb-4">Atendimento Rápido</h3>
+          <p className="text-zinc-400">Orçamento fácil e suporte direto pelo WhatsApp.</p>
+        </div>
+
+        <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+          <h3 className="text-2xl font-bold text-red-500 mb-4">Produtos Premium</h3>
+          <p className="text-zinc-400">Utilizamos técnicas e produtos profissionais para máxima qualidade.</p>
+        </div>
+
+        <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+          <h3 className="text-2xl font-bold text-red-500 mb-4">Resultado de Respeito</h3>
+          <p className="text-zinc-400">Seu carro com aparência renovada e acabamento impecável.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTATO */}
+  <section className="py-20 px-6 bg-zinc-950 border-t border-zinc-900">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-red-500 mb-4">
+          Agendamento Online
+        </h2>
+
+        <p className="text-zinc-400 text-lg">
+          Solicite seu horário rapidamente e receba atendimento personalizado.
+        </p>
+      </div>
+
+      <div className="bg-black border border-red-900 rounded-3xl p-8 shadow-2xl">
+        <form className="grid md:grid-cols-2 gap-6">
+          <input
+            type="text"
+            placeholder="Seu nome"
+            className="bg-zinc-900 border border-zinc-800 rounded-2xl px-5 py-4 text-white outline-none focus:border-red-600"
+          />
+
+          <input
+            type="tel"
+            placeholder="WhatsApp"
+            className="bg-zinc-900 border border-zinc-800 rounded-2xl px-5 py-4 text-white outline-none focus:border-red-600"
+          />
+
+          <select className="bg-zinc-900 border border-zinc-800 rounded-2xl px-5 py-4 text-white outline-none focus:border-red-600">
+            <option>Escolha um serviço</option>
+            <option>Lavagem Convencional</option>
+            <option>Lavagem Técnica</option>
+            <option>Polimento Comercial</option>
+            <option>Polimento Técnico</option>
+            <option>Higienização Interna</option>
+            <option>Lavagem de Motor</option>
+            <option>Lavagem de Chassis</option>
+          </select>
+
+          <input
+            type="date"
+            className="bg-zinc-900 border border-zinc-800 rounded-2xl px-5 py-4 text-white outline-none focus:border-red-600"
+          />
+
+          <textarea
+            placeholder="Detalhes do veículo ou serviço"
+            rows="5"
+            className="md:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl px-5 py-4 text-white outline-none focus:border-red-600"
+          ></textarea>
+
+          <button
+            type="submit"
+            className="md:col-span-2 bg-red-600 hover:bg-red-700 transition py-5 rounded-2xl text-xl font-bold shadow-2xl"
+          >
+            Solicitar Agendamento
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section className="bg-gradient-to-t from-red-950 to-black py-20 px-6 text-center">
+    <h2 className="text-4xl font-bold text-red-500 mb-6">
+      Agende seu horário
+    </h2>
+
+    <p className="text-zinc-300 text-lg max-w-2xl mx-auto mb-8">
+      Entre em contato agora mesmo e deixe seu carro com aparência de novo.
+    </p>
+
+    <a
+      href="https://wa.me/5511972582900"
+      className="inline-block bg-red-600 hover:bg-red-700 transition px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl"
+    >
+      Falar no WhatsApp
+    </a>
+
+    <div className="mt-10 text-zinc-500 text-sm">
+      📍 Rua Amazonas, Nº 251 - Vila Nambi | Jundiaí - SP
+    </div>
+  </section>
+</div>
+
+) }
